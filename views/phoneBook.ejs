@@ -1,0 +1,92 @@
+<%- include('header'); -%>
+<div >
+<h1><%= title %></h1>
+<div >
+  <p>list of entries inside of the phoneBook</p>
+</div>
+<table >
+  <thead>
+    <tr scope="column">Last Name</tr>
+    <tr scope="column">First Name</tr>
+    <tr scope="column">Birth Date</tr>
+    <tr scope="column">Phone Number</tr>
+    <tr scope="column">Email Address</tr>
+  </thead>
+  <tbody></tbody>
+</table>
+<div class="alert-danger d-none" role="alert" id="loading-alert">
+  cannot load the list of the entries in the PhoneBook
+</div>
+</div>
+</div>
+<div class="card">
+  <div>
+    <h2> New entry to the phoneBook</h2>
+    <div >
+      could not create this new entry.
+    </div>
+    <form>
+      <div class="mb-3">
+        <label>last Name</label>
+        <input
+        type="text"
+        name="lastName"
+        minlengt="3"
+        placeholder="Kamnang"
+        id="lastName"
+        class="form-control"
+        />
+        <div>last Name is required</div>
+      </div>
+      <div>
+        <label for="firstName" class="form-label">first Name</label>
+        <input
+        type="text"
+        name="firstName"
+        minlengt="3"
+        placeholder="Kevin"
+        id="firstName"
+        class="form-control"
+        />
+        <div>first Name is required</div>
+     </div>
+     <div>
+      <label for="birthDate" class="form-label">birth Date</label>
+      <input
+      type="text"
+      name="birthDate"
+      min="1900-01-01"
+      id="birthDate"
+      class="form-control"
+      />
+</div>
+<div>
+  <label>Phone Number</label>
+  <input
+  type="tel"
+  name="PhoneNumber"
+  min="1900-01-01"
+  placeholder="(0032)0467644692"
+  id="phonNumber"
+  class="form-control"
+  />
+  <div>
+    <label>Email Address</label>
+    <input
+    type="email"
+    name="emailAdress"
+    placeholder="kevinulrich78.ku@gmail.com"
+    id="emailAddress"
+    class="form-control"
+    />
+</div>
+<div >
+  <button type="submit" >Add</button>
+  <button type="reset">Cancel</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script src="/scripts/phonebook-sript.js" defer></script>
+<%- include('footer'); -%>
